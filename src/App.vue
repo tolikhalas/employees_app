@@ -2,6 +2,7 @@
 import { onMounted, ref } from "vue";
 import HomeView from "./views/HomeView.vue";
 import NavBar from "./components/widgets/NavBar.vue";
+import Footer from "./components/widgets/Footer.vue";
 
 const theme = ref("cupcake");
 const html = document.querySelector("html");
@@ -17,8 +18,11 @@ const toggleTheme = () => {
 </script>
 
 <template>
-  <NavBar />
-  <main class="px-4">
-    <HomeView />
-  </main>
+  <div class="flex min-h-screen flex-col">
+    <NavBar />
+    <main class="flex-1 px-4">
+      <HomeView />
+    </main>
+    <Footer />
+  </div>
 </template>

@@ -15,4 +15,8 @@ export default defineConfig({
     host: "localhost",
     port: 8080,
   },
+  // Optimization
+  optimizeDeps: {
+    exclude: [] // Possible exclution of OhVueIcons!
+  }
 });
