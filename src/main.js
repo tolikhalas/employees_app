@@ -4,14 +4,14 @@ import { createApp } from "vue";
 import "./assets/styles/index.css";
 // Icons
 import { OhVueIcon, addIcons } from "oh-vue-icons";
-import { HiMenuAlt2, CoBell } from "oh-vue-icons/icons";
+import { HiMenuAlt2, CoBell, IoCloseSharp } from "oh-vue-icons/icons";
 
 import App from "./App.vue";
 
 const app = createApp(App);
 
 // Adding icons to app
-addIcons(HiMenuAlt2, CoBell);
+addIcons(HiMenuAlt2, CoBell, IoCloseSharp);
 app.component("v-icon", OhVueIcon);
 
 app.mount("#app");

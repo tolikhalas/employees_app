@@ -18,7 +18,7 @@ const toggleTheme = () => {
 
 <template>
   <NavBar />
-  <main>
+  <main class="px-4">
     <HomeView />
   </main>
 </template>
