@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch } from "vue";
+import { ref } from "vue";
 
 const isBurgerOpen = ref(false);
 const isNotificationsOpen = ref(false);
@@ -28,7 +28,7 @@ const switchAccountDetails = () => {
 </script>
 
 <template>
-  <section class="p-4">
+  <section class="w-full p-4">
     <nav class="navbar rounded-full bg-base-100 shadow-lg">
       <div class="navbar-start">
         <div class="w-full">
@@ -59,7 +59,7 @@ const switchAccountDetails = () => {
         </div>
       </div>
       <div class="navbar-center">
-        <button class="btn btn-ghost text-xl">Emp App</button>
+        <button class="btn btn-ghost text-xl text-primary">Emp App</button>
       </div>
       <div class="navbar-end">
         <div class="dropdown-end md:dropdown md:dropdown-bottom">

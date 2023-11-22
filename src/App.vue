@@ -19,8 +19,8 @@ const toggleTheme = () => {
 
 <template>
   <div class="flex min-h-screen flex-col">
-    <NavBar />
-    <main class="flex-1 px-4">
+    <NavBar class="fixed top-0" />
+    <main class="flex-1">
       <HomeView />
     </main>
     <Footer />
