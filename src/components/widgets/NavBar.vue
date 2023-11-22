@@ -28,7 +28,7 @@ const switchAccountDetails = () => {
 </script>
 
 <template>
-  <section class="w-full p-4">
+  <section class="w-full z-[999] p-4">
     <nav class="navbar rounded-full bg-base-100 shadow-lg">
       <div class="navbar-start">
         <div class="w-full">
