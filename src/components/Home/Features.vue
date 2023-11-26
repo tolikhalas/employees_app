@@ -15,7 +15,7 @@ import EmployeesList from "@/components/Home/EmployeesList.vue";
         </p>
       </div>
       <div class="px-8">
-        <div role="tablist" class="lg:tabs-boxed lg:tabs lg:gap-0">
+        <div role="tablist" class="lg:tabs-boxed lg:tabs">
           <input
             type="radio"
             name="feat_tabs"
