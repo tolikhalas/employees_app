@@ -84,7 +84,7 @@ watch(
     <h1 class="my-2 px-4 text-xl font-semibold lg:hidden">Employees list</h1>
     <table class="table">
       <thead>
-        <tr>
+        <tr :class="selectAll ? 'bg-primary' : ''">
           <th>
             <label>
               <input
@@ -102,7 +102,11 @@ watch(
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(employee, index) in employees" :key="index">
+        <tr
+          v-for="(employee, index) in employees"
+          :key="index"
+          :class="employee.checked ? 'bg-accent' : ''"
+        >
           <th>
             <label>
               <input
@@ -131,9 +135,11 @@ watch(
           <td>
             {{ employee.job.company }}
             <br />
-            <span class="badge badge-ghost badge-sm">{{
-              employee.job.vacancy
-            }}</span>
+            <span
+              class="badge badge-ghost badge-sm"
+              :class="employee.checked ? 'bg-primary' : ''"
+              >{{ employee.job.vacancy }}</span
+            >
           </td>
           <td>{{ employee.preferences.color }}</td>
           <th>
