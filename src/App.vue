@@ -4,7 +4,7 @@ import HomeView from "./views/HomeView.vue";
 import NavBar from "./components/widgets/NavBar.vue";
 import Footer from "./components/widgets/Footer.vue";
 
-const theme = ref("cupcake");
+const theme = ref("cyberpunk");
 const html = document.querySelector("html");
 
 onMounted(() => {
@@ -19,10 +19,10 @@ const toggleTheme = () => {
 
 <template>
   <div class="flex min-h-screen flex-col">
-    <NavBar class="fixed top-0" />
-    <main class="flex-1">
+    <NavBar class="fixed" />
+    <main class="flex-grow">
       <HomeView />
     </main>
-    <Footer />
+    <Footer class="mt-auto" />
   </div>
 </template>

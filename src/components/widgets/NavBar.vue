@@ -28,8 +28,8 @@ const switchAccountDetails = () => {
 </script>
 
 <template>
-  <section class="w-full z-[999] p-4">
-    <nav class="navbar rounded-full bg-base-100 shadow-lg">
+  <section class="z-[999] w-full p-4">
+    <nav class="glass navbar rounded-full bg-base-100 shadow-lg">
       <div class="navbar-start">
         <div class="w-full">
           <label
@@ -48,7 +48,7 @@ const switchAccountDetails = () => {
           <div class="flex flex-col">
             <ul
               :tabindex="0"
-              class="menu menu-md absolute left-4 right-4 z-[1] mt-3 block rounded-box bg-base-100 p-2 shadow transition duration-200 md:menu-sm md:h-auto md:w-60"
+              class="menu menu-md absolute left-0 right-0 z-[1] mt-3 block rounded-box bg-base-100 p-2 shadow transition duration-200 md:menu-sm md:h-auto md:w-60"
               :class="isBurgerOpen ? '' : 'hidden'"
             >
               <li><a href="#">Home</a></li>
@@ -70,7 +70,7 @@ const switchAccountDetails = () => {
             </div>
           </button>
           <ul
-            class="menu menu-sm absolute left-4 right-4 z-[1] mt-3 block rounded-box bg-base-100 p-2 shadow transition duration-200 md:dropdown-content md:left-auto md:w-64"
+            class="menu menu-sm absolute left-0 right-0 z-[1] mt-3 block rounded-box bg-base-100 p-2 shadow transition duration-200 md:dropdown-content md:left-auto md:w-64"
             :class="isNotificationsOpen ? '' : 'hidden opacity-0'"
           >
             <li>
@@ -107,7 +107,7 @@ const switchAccountDetails = () => {
           ></label>
           <ul
             :tabindex="0"
-            class="menu dropdown-content menu-sm absolute left-4 right-4 z-[1] mt-3 block rounded-box bg-base-100 p-2 shadow md:left-auto md:right-auto md:w-52"
+            class="menu dropdown-content menu-sm absolute left-0 right-0 z-[1] mt-3 block rounded-box bg-base-100 p-2 shadow md:left-auto md:right-auto md:w-52"
             :class="isAccountDetailsOpen ? '' : 'hidden'"
           >
             <li><a href="#">Profile</a></li>
