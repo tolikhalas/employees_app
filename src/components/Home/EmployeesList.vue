@@ -96,8 +96,8 @@ watch(
             </label>
           </th>
           <th>Name</th>
-          <th>Job</th>
-          <th>Favorite Color</th>
+          <th class="hidden md:table-cell">Job</th>
+          <th class="hidden md:table-cell">Favorite Color</th>
           <th></th>
         </tr>
       </thead>
@@ -132,7 +132,7 @@ watch(
               </div>
             </div>
           </td>
-          <td>
+          <td class="hidden md:table-cell">
             {{ employee.job.company }}
             <br />
             <span
@@ -141,7 +141,9 @@ watch(
               >{{ employee.job.vacancy }}</span
             >
           </td>
-          <td>{{ employee.preferences.color }}</td>
+          <td class="hidden md:table-cell">
+            {{ employee.preferences.color }}
+          </td>
           <th>
             <button class="btn btn-ghost btn-xs">details</button>
           </th>
