@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import EmployeesList from "@/components/Home/EmployeesList.vue";
+</script>
 
 <template>
   <section
@@ -13,33 +15,33 @@
         </p>
       </div>
       <div class="px-8">
-        <div role="tablist" class="md:tabs-boxed md:tabs">
+        <div role="tablist" class="lg:tabs-boxed lg:tabs lg:gap-0">
           <input
             type="radio"
             name="feat_tabs"
             role="tab"
-            class="tab hidden md:inline-flex"
+            class="tab hidden lg:inline-flex"
             aria-label="Employees List"
           />
           <div
             role="tabpanel"
-            class="rounded-box border-base-300 bg-base-100 p-10 md:tab-content"
+            class="my-4 rounded-box border-base-300 bg-base-100 p-10 lg:tab-content"
           >
-            Employees list
+            <EmployeesList />
           </div>
 
           <input
             type="radio"
             name="feat_tabs"
             role="tab"
-            class="tab hidden md:inline-flex"
+            class="tab hidden lg:inline-flex"
             aria-label="Chat"
             checked
           />
 
           <div
             role="tabpanel"
-            class="rounded-box border-base-300 bg-base-100 p-10 md:tab-content"
+            class="rounded-box border-base-300 bg-base-100 p-10 lg:tab-content"
           >
             Employees Chat
           </div>
@@ -48,12 +50,12 @@
             type="radio"
             name="feat_tabs"
             role="tab"
-            class="tab hidden md:inline-flex"
+            class="tab hidden lg:inline-flex"
             aria-label="Management"
           />
           <div
             role="tabpanel"
-            class="rounded-box border-base-300 bg-base-100 p-10 md:tab-content"
+            class="rounded-box border-base-300 bg-base-100 p-10 lg:tab-content"
           >
             Employees Management
           </div>
@@ -61,12 +63,12 @@
             type="radio"
             name="feat_tabs"
             role="tab"
-            class="tab hidden md:inline-flex"
+            class="tab hidden lg:inline-flex"
             aria-label="Notifications"
           />
           <div
             role="tabpanel"
-            class="rounded-box border-base-300 bg-base-100 p-10 md:tab-content"
+            class="rounded-box border-base-300 bg-base-100 p-10 lg:tab-content"
           >
             Notifications
           </div>
