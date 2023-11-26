@@ -81,7 +81,7 @@ watch(
 
 <template>
   <div class="overflow-x-auto">
-    <h1 class="my-2 px-4 text-xl font-semibold lg:hidden">Employees list</h1>
+    <h1 class="mt-2 mb-4 text-xl font-semibold lg:hidden">Employees list</h1>
     <table class="table">
       <thead>
         <tr :class="selectAll ? 'bg-primary' : ''">

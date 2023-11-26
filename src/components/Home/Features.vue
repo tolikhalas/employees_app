@@ -1,5 +1,6 @@
 <script setup>
 import EmployeesList from "@/components/Home/EmployeesList.vue";
+import ChatDemo from "@/components/Home/ChatDemo.vue";
 </script>
 
 <template>
@@ -41,9 +42,9 @@ import EmployeesList from "@/components/Home/EmployeesList.vue";
 
           <div
             role="tabpanel"
-            class="rounded-box border-base-300 bg-base-100 p-10 lg:tab-content"
+            class="my-4 rounded-box border-base-300 bg-base-100 p-10 lg:tab-content"
           >
-            Employees Chat
+            <ChatDemo />
           </div>
 
           <input
@@ -55,7 +56,7 @@ import EmployeesList from "@/components/Home/EmployeesList.vue";
           />
           <div
             role="tabpanel"
-            class="rounded-box border-base-300 bg-base-100 p-10 lg:tab-content"
+            class="my-4 rounded-box border-base-300 bg-base-100 p-10 lg:tab-content"
           >
             Employees Management
           </div>
@@ -68,7 +69,7 @@ import EmployeesList from "@/components/Home/EmployeesList.vue";
           />
           <div
             role="tabpanel"
-            class="rounded-box border-base-300 bg-base-100 p-10 lg:tab-content"
+            class="my-4 rounded-box border-base-300 bg-base-100 p-10 lg:tab-content"
           >
             Notifications
           </div>
