@@ -1,6 +1,8 @@
 <script setup>
-import EmployeesList from "@/components/Home/EmployeesList.vue";
-import ChatDemo from "@/components/Home/ChatDemo.vue";
+import EmployeesList from "@/components/Home/Features/EmployeesList.vue";
+import ChatDemo from "@/components/Home/Features/ChatDemo.vue";
+import ManagementDemo from "@/components/Home/Features/ManagementDemo.vue";
+import NotificationDemo from "./Features/NotificationDemo.vue";
 </script>
 
 <template>
@@ -15,7 +17,7 @@ import ChatDemo from "@/components/Home/ChatDemo.vue";
           different ways
         </p>
       </div>
-      <div class="px-8">
+      <div>
         <div role="tablist" class="lg:tabs-boxed lg:tabs">
           <input
             type="radio"
@@ -58,7 +60,7 @@ import ChatDemo from "@/components/Home/ChatDemo.vue";
             role="tabpanel"
             class="my-4 rounded-box border-base-300 bg-base-100 p-10 lg:tab-content"
           >
-            Employees Management
+            <ManagementDemo />
           </div>
           <input
             type="radio"
@@ -71,7 +73,7 @@ import ChatDemo from "@/components/Home/ChatDemo.vue";
             role="tabpanel"
             class="my-4 rounded-box border-base-300 bg-base-100 p-10 lg:tab-content"
           >
-            Notifications
+            <NotificationDemo />
           </div>
         </div>
       </div>
