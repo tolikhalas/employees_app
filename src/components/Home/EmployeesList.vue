@@ -1,7 +1,63 @@
 <script setup>
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 
 const selectAll = ref(false);
+
+// TODO: Replace mock data with fetch from MongoDB messages collection
+const employees = reactive([
+  {
+    name: "Hart Hagerty",
+    location: "United States",
+    image: "src/assets/img/user1.png",
+    job: {
+      company: "Zemlak, Daniel and Leannon",
+      vacancy: "Desktop Support Technician",
+    },
+    preferences: {
+      color: "Purple",
+    },
+    checked: ref(false),
+  },
+  {
+    name: "Brice Swyre",
+    location: "China",
+    image: "src/assets/img/user2.png",
+    job: {
+      company: " Carroll Group ",
+      vacancy: "Tax Accountant",
+    },
+    preferences: {
+      color: "Red",
+    },
+    checked: ref(false),
+  },
+  {
+    name: "Marjy Ferencz",
+    location: "Latvia",
+    image: "src/assets/img/user3.png",
+    job: {
+      company: "Rowe-Schoen",
+      vacancy: "Office Assistant I",
+    },
+    preferences: {
+      color: "Crimson",
+    },
+    checked: ref(false),
+  },
+  {
+    name: "Yancy Tear",
+    location: "Brazil",
+    image: "src/assets/img/user4.png",
+    job: {
+      company: "Wyman-Ledner",
+      vacancy: "Community Outreach Specialist",
+    },
+    preferences: {
+      color: "Indigo",
+    },
+    checked: ref(false),
+  },
+]);
 </script>
 
 <template>
