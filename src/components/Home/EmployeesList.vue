@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, ref } from "vue";
+import { reactive, ref, watch } from "vue";
 
 const selectAll = ref(false);
 
@@ -58,6 +58,25 @@ const employees = reactive([
     checked: ref(false),
   },
 ]);
+
+const selectAllAction = () => {
+  selectAll.value = !selectAll.value;
+  employees.forEach((employee) => {
+    employee.checked = selectAll.value;
+  });
+};
+
+watch(
+  employees,
+  () => {
+    if (employees.filter((employee) => !employee.checked).length > 0) {
+      selectAll.value = false;
+    } else {
+      selectAll.value = true;
+    }
+  },
+  { deep: true },
+);
 </script>
 
 <template>
@@ -68,7 +87,12 @@ const employees = reactive([
         <tr>
           <th>
             <label>
-              <input type="checkbox" class="checkbox" v-model="selectAll" />
+              <input
+                type="checkbox"
+                class="checkbox"
+                v-model="selectAll"
+                @click="selectAllAction"
+              />
             </label>
           </th>
           <th>Name</th>
