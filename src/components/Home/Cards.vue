@@ -40,7 +40,7 @@ const cards = [
 
 <template>
   <section class="relative flex min-h-screen justify-center px-8">
-    <WavesDelimeter class="top-0 rotate-180" waves="waves.svg" />
+    <WavesDelimeter class="top-0 rotate-180" waves="waves" />
     <div
       class="grid grid-cols-1 content-center gap-8 py-32 md:grid-cols-3 md:py-0"
     >
@@ -57,6 +57,10 @@ const cards = [
         </div>
       </div>
     </div>
-    <WavesDelimeter waves="wavesOpacity.svg" />
+    <WavesDelimeter
+      waves="wavesOpacity"
+      monochrome="fill-secondary"
+      class="bottom-0 rotate-180"
+    />
   </section>
 </template>
