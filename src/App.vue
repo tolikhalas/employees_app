@@ -4,7 +4,7 @@ import HomeView from "./views/HomeView.vue";
 import NavBar from "./components/widgets/NavBar.vue";
 import Footer from "./components/widgets/Footer.vue";
 
-const theme = ref("cyberpunk");
+const theme = ref("dark");
 const html = document.querySelector("html");
 
 onMounted(() => {

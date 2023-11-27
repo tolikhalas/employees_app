@@ -7,7 +7,7 @@ import NotificationDemo from "./Features/NotificationDemo.vue";
 
 <template>
   <section
-    class="grid min-h-screen content-center justify-center bg-secondary py-20 md:px-12 md:py-0"
+    class="grid min-h-screen content-center justify-center bg-secondary py-20 md:px-12 md:py-8"
   >
     <div class="max-w-6xl">
       <div class="m-8 grid gap-4 md:m-4">
@@ -79,4 +79,5 @@ import NotificationDemo from "./Features/NotificationDemo.vue";
       </div>
     </div>
   </section>
+  
 </template>

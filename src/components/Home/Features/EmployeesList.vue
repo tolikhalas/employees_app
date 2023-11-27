@@ -81,10 +81,10 @@ watch(
 
 <template>
   <div class="overflow-x-auto">
-    <h1 class="mt-2 mb-4 text-xl font-semibold lg:hidden">Employees list</h1>
+    <h1 class="mb-4 mt-2 text-xl font-semibold lg:hidden">Employees list</h1>
     <table class="table">
       <thead>
-        <tr :class="selectAll ? 'bg-primary' : ''">
+        <tr :class="selectAll ? 'bg-primary text-primary-content' : ''">
           <th>
             <label>
               <input
@@ -105,7 +105,7 @@ watch(
         <tr
           v-for="(employee, index) in employees"
           :key="index"
-          :class="employee.checked ? 'bg-accent' : ''"
+          :class="employee.checked ? 'bg-accent text-accent-content' : ''"
         >
           <th>
             <label>

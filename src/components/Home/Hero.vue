@@ -29,6 +29,6 @@ import BlobFigure from "@/components/Global/BlobFigure.vue";
         <BlobFigure />
       </div>
     </div>
-    <WavesDelimeter />
+    <WavesDelimeter waves="waves.svg" />
   </header>
 </template>

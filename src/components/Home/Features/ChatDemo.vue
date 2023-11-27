@@ -6,7 +6,7 @@ const messages = reactive([
   {
     from: {
       username: "Obi-Wan Kenobi",
-      image: "src/assets/img/user1.png",
+      image: "src/assets/img/obi_wan.jpg",
     },
     text: "You were the Chosen One!",
     time: "12:45",
@@ -15,7 +15,7 @@ const messages = reactive([
   {
     from: {
       username: "Anakin",
-      image: "src/assets/img/user2.png",
+      image: "src/assets/img/anakin.png",
     },
     text: "I hate you!",
     time: "12:46",
