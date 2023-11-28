@@ -51,9 +51,11 @@ const showNotifications = () => {
 
 <template>
   <section class="flex flex-col justify-between gap-4 md:flex-row">
-    <div class="flex flex-col gap-4">
-      <h1 class="text-xl font-semibold">Notifications</h1>
-      <p>You have 2 notifications.</p>
+    <div class="flex flex-col justify-between gap-4">
+      <div class="grid gap-2">
+        <h1 class="text-xl font-semibold">Notifications</h1>
+        <p>You have {{ notifications.length }} notifications.</p>
+      </div>
       <button class="btn btn-primary max-w-xs" @click="showNotifications">
         Show notifications
       </button>

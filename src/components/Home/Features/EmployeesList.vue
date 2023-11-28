@@ -137,7 +137,7 @@ watch(
             <br />
             <span
               class="badge badge-ghost badge-sm"
-              :class="employee.checked ? 'bg-primary' : ''"
+              :class="employee.checked ? 'bg-primary text-primary-content' : ''"
               >{{ employee.job.vacancy }}</span
             >
           </td>
