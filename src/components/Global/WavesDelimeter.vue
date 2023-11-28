@@ -47,8 +47,8 @@ const pathElements = computed(() => {
 const calculateViewBox = computed(() => {
   if (svgElement.value) {
     let viewBox = svgElement.value.getAttribute("viewBox").split(" ");
-    let height = viewBox.at(-1);
-    viewBox[viewBox.length - 1] = height < 160 ? height : 160;
+    const viewBoxHeight = viewBox.at(-1);
+    viewBox[viewBox.length - 1] = viewBoxHeight < 160 ? viewBoxHeight : 160;
     return viewBox;
   }
 });
@@ -72,9 +72,8 @@ const calculateDynamicClasses = (monochrome, index, length) => {
 
 <template>
   <svg
-    id="waves"
     :viewBox="calculateViewBox"
-    class="absolute bottom-0 left-0 right-0 block px-0"
+    class="waves absolute bottom-0 left-0 right-0 block px-0"
   >
     <path
       v-for="(path, index) in pathElements"
