@@ -1,5 +1,5 @@
 <script setup>
-import { computed, defineProps, onMounted, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 
 // WavesDeilmeter props
 const { waves } = defineProps({
@@ -20,10 +20,13 @@ const svgElement = ref(null);
 
 const loadSvg = async () => {
   try {
+    // Request an svg
     const svgRequest = new Request(`/src/assets/img/${waves}.svg`);
     const svgHeaders = new Headers();
     svgHeaders.append("Accept", "image/svg+xml");
     const svgResponse = await fetch(svgRequest, svgHeaders);
+
+    // Parsing svg
     const svgModule = await svgResponse.blob();
     const svgText = await svgModule.text();
     const parser = new DOMParser();
@@ -34,7 +37,7 @@ const loadSvg = async () => {
   }
 };
 
-// Paths
+// Paths' methods
 const pathElements = computed(() => {
   if (svgElement.value) {
     return Array.from(svgElement.value.querySelectorAll("path"));
@@ -56,9 +59,11 @@ const calculateDynamicClasses = (monochrome, index, length) => {
     ? monochrome
     : index === 0
       ? "fill-secondary"
-      : index === length - 1
+      : index === length
         ? "fill-primary"
-        : `fill-primary-${index + 1}/${length}`;
+        : index / length === 0.5
+          ? "fill-primary-1/2"
+          : `fill-primary-${String(index)}/${String(length)}`;
 };
 </script>
 
@@ -73,7 +78,9 @@ const calculateDynamicClasses = (monochrome, index, length) => {
       :key="index"
       :d="path.getAttribute('d')"
       :opacity="calculateOpacity(path)"
-      :class="calculateDynamicClasses(monochrome, index, pathElements.length)"
+      :class="
+        calculateDynamicClasses(monochrome, index, pathElements.length - 1)
+      "
     />
   </svg>
 </template>

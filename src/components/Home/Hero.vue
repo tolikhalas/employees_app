@@ -7,13 +7,13 @@ import BlobFigure from "@/components/Global/BlobFigure.vue";
   <header class="hero relative grid h-screen items-center">
     <div class="flex flex-col-reverse justify-center px-12 md:flex-row">
       <div
-        class="hero-content flex flex-col items-start justify-center font-semibold md:space-y-2"
+        class="hero-content flex flex-col items-start justify-center font-semibold md:w-1/2 md:space-y-2"
       >
-        <h1 class="text-2xl lg:text-6xl">
+        <h1 class="text-2xl md:text-4xl lg:text-6xl">
           <span class="mb-2 text-primary">Empoyee App</span> <br />
           <span>Your company greatest tool</span>
         </h1>
-        <p class="text-md text-base-content lg:text-xl">
+        <p class="text-md text-base-content md:text-lg lg:text-xl">
           Optimize & Enhance your productivity
         </p>
         <div
@@ -25,8 +25,8 @@ import BlobFigure from "@/components/Global/BlobFigure.vue";
           </button>
         </div>
       </div>
-      <div>
-        <BlobFigure />
+      <div class="flex justify-center md:w-1/2">
+        <BlobFigure class="w-auto sm:w-3/4 md:w-auto" />
       </div>
     </div>
     <WavesDelimeter waves="waves" />
