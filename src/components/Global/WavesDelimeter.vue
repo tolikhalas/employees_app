@@ -46,7 +46,10 @@ const pathElements = computed(() => {
 
 const calculateViewBox = computed(() => {
   if (svgElement.value) {
-    return svgElement.value.getAttribute("viewBox");
+    let viewBox = svgElement.value.getAttribute("viewBox").split(" ");
+    let height = viewBox.at(-1);
+    viewBox[viewBox.length - 1] = height < 160 ? height : 160;
+    return viewBox;
   }
 });
 
